@@ -1,0 +1,35 @@
+<div class="container" *ngIf="!isChosenYes">
+  <div class="title">
+    {{ arr[slideNumber] }}
+  </div>
+  <button class="button" (click)="addNumber()" *ngIf="slideNumber !== 5">Нажми на мене!</button>
+
+  <img src="https://media1.tenor.com/m/u4vjYDesyRUAAAAd/pig-%D1%81%D0%B2%D0%B8%D0%BD%D1%8F.gif"
+       *ngIf="slideNumber === 0">
+  <iframe *ngIf="slideNumber === 1" src="https://giphy.com/embed/JIX9t2j0ZTN9S" width="480" height="480" frameBorder="0"
+          class="giphy-embed" allowFullScreen></iframe>
+  <iframe *ngIf="slideNumber === 2" src="https://giphy.com/embed/yFQ0ywscgobJK" width="398" height="480" frameBorder="0"
+          class="giphy-embed" allowFullScreen></iframe>
+  <iframe *ngIf="slideNumber === 3" src="https://giphy.com/embed/aC45M5Q4D07Pq" width="480" height="360" frameBorder="0"
+          class="giphy-embed" allowFullScreen></iframe>
+  <iframe *ngIf="slideNumber === 4" src="https://giphy.com/embed/CLVnXSGre9lgk" width="480" height="480" frameBorder="0"
+          class="giphy-embed" allowFullScreen></iframe>
+
+  <ng-container *ngIf="slideNumber === 5">
+    <div class="buttons">
+      <button class="button" (click)="isChosenYes = true">Так</button>
+      <button class="button" (click)="isChosenYes = false">Ні</button>
+    </div>
+    <iframe src="https://giphy.com/embed/sNaBNHusmmndIdzAFw" width="480" height="480" frameBorder="0" class="giphy-embed"
+            allowFullScreen></iframe>
+  </ng-container>
+</div>
+
+<div class="container" *ngIf="isChosenYes">
+  <div class="title">
+    І я тебе кохаю!<br>
+    Пропоную домовитися за дейт!
+  </div>
+  <iframe src="https://giphy.com/embed/l3q2up9FZPFncIt1e" width="480" height="270" frameBorder="0" class="giphy-embed"
+          allowFullScreen></iframe>
+</div>
